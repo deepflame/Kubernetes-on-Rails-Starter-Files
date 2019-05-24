@@ -1,3 +1,7 @@
-image: deepflame/gitpod-workspace-postgres
+image: deepflame/gitpod-workspace-image-postgres
 ports:
 - port: 3000
+tasks:
+- before: gem install tmuxinator
+- init: bundle install --path vendor/bundle
+- command: tmuxinator
