@@ -1,6 +1,7 @@
 image: deepflame/gitpod-workspace-image-postgres
 ports:
 - port: 3000
+workspaceLocation: "captioned_images"
 tasks:
 - before: gem install tmuxinator
 - init: bundle install --path vendor/bundle
